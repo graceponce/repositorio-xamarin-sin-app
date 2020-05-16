@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Registrate con nosotros";
+}
+
+    <form method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Correo</label>
+                <input type="email" class="form-control is-valid is-invalid" id="inputEmail">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Contrasena</label>
+                <input type="password" class="form-control is-valid is-invalid" id="inputPassword">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Direccion</label>
+            <input type="text" class="form-control is-valid is-invalid" id="inputAddress" placeholder="1234 colonia calle">
+        </div>
+ 
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputName">Nombre</label>
+                <input type="text" class="form-control is-valid is-invalid" id="inputName">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputApellido">Apellido</label>
+                <input type="text" class="form-control is-valid is-invalid" id="inputApellido">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputedad">edad</label>
+                <select id="inputedad" class="form-control is-valid is-invalid">
+                    <option selected>18-20</option>
+                    <option>20-30</option>
+                    <option>30-40</option>
+                    <option>40-50</option>
+                    <option>50-60</option>
+                    <option>60-70</option>
+                    <option>70-80</option>
+                    <option>80-90</option>
+                    <option>90-100</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputtel">Telefono</label>
+                <input type="tel" class="form-control is-valid is-invalid" id="inputtel">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input disabled is-valid is-invalid"  type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Acepto terminos y condiciones
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
