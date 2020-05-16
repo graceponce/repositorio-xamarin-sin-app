@@ -35,12 +35,19 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Login">Inicio de Sesion</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Carrito">Mis Compras</a></li>
+
                 </ul>
             </div>
-        </div>
-    </nav>
+            <div class="navbar-collapse collapse">
+                <div class="nav navbar-nav navbar-right">
+                    <ul>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Login">Inicio de Sesion</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+</nav>
 
     <partial name="_CookieConsentPartial" />
 
