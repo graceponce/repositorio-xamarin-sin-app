@@ -44,11 +44,6 @@ namespace Shop.web.Controllers
             ViewData["Message"] = "Your login page.";
             return View();
         }
-        public IActionResult Carrito()
-        {
-            ViewData["Message"] = "Your Carrito page o Shop page.";
-            return View();
-        }
         public IActionResult Registro()
         {
             ViewData["Message"] = "Your Register data";
