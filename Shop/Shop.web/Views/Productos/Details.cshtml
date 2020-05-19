@@ -1,0 +1,60 @@
+﻿@model Shop.web.Data.Entity.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalles de Productos</h2>
+
+<div>
+    <h4>Productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlImagen)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UrlImagen)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ultima_fecha_Compra)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ultima_fecha_Compra)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ultima_Compra)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ultima_Compra)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Disponibilidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Disponibilidad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a> |
+    <a asp-action="Index" class="btn btn-default">Volver Atras</a>
+</div>

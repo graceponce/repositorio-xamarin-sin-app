@@ -1,0 +1,63 @@
+﻿@model Shop.web.Data.Entity.Product
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estas seguro que deseas eliminar este producto?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlImagen)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UrlImagen)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ultima_fecha_Compra)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ultima_fecha_Compra)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ultima_Compra)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ultima_Compra)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Disponibilidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Disponibilidad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-default">Volver atras</a>
+    </form>
+</div>

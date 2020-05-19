@@ -10,7 +10,7 @@ using Shop.web.Data;
 namespace Shop.web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200516222137_InitialDb")]
+    [Migration("20200518220156_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,23 +27,25 @@ namespace Shop.web.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ImageUrl");
+                    b.Property<bool>("Disponibilidad");
 
-                    b.Property<bool>("IsAvailabe");
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
-                    b.Property<DateTime>("LastPurchase");
-
-                    b.Property<DateTime>("LastSale");
-
-                    b.Property<string>("Name");
-
-                    b.Property<decimal>("Price");
+                    b.Property<decimal>("Precio");
 
                     b.Property<double>("Stock");
 
+                    b.Property<DateTime?>("Ultima_Compra");
+
+                    b.Property<DateTime?>("Ultima_fecha_Compra");
+
+                    b.Property<string>("UrlImagen");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Productos");
                 });
 #pragma warning restore 612, 618
         }

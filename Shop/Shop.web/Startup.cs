@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Shop.web.Data;
+using Shop.web.Data.Entity;
 
 namespace Shop.web
 {
@@ -32,6 +33,11 @@ namespace Shop.web
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            services.AddTransient<Seed>();
+
+            //inyeccion de los metodos se agrego
+            services.AddScoped<IRepository, Repository>();
+
             services.AddDbContext<DataContext>(cfg =>
             {
                 cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
